@@ -1,25 +1,69 @@
-# README
+#WANTEDLY-Copy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##User
+**association**  
+```
+has_many 
+```  
+  
+**table**  
+* **name**, string  
+* member, string  
+* profile, text  
+* works, text  
+* created_at, datetime  
+* updated_at, datetime
 
-Things you may want to cover:
+##Projects
+**association**  
+```
+has_many
+```  
+```
+belongs_to
+```  
 
-* Ruby version
+**table**  
+* user_id, integer  
+* title, string  
+* catchcopy, string  
+* concept, text  
+* created_at, datetime  
+* updated_at, datetime
 
-* System dependencies
+##CapturedImage
+**association**  
+```
+belongs_to :prototype
+```  
 
-* Configuration
+**table**  
+* prototype_id, integer  
+* created_at, datetime  
+* updated_at, datetime
+* **role, integer ( main: 0, sub: 1 )**
 
-* Database creation
+##Like
+**association**  
+```
+belongs_to :user, prototype
+```  
 
-* Database initialization
+**table**  
+* user_id, integer
+* prototype_id, integer
+* created_at, datetime  
+* updated_at, datetime
 
-* How to run the test suite
+##Comment
+**association**  
+```
+belongs_to :user, prototype
+```  
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# wantedly-copy
+**table**  
+* content, text  
+* user_id, integer
+* prototype_id, integer
+* created_at, datetime  
+* updated_at, datetime
