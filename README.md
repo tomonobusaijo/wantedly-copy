@@ -3,10 +3,13 @@
 ##User
 **association**  
 ```
-has_many :images, entries
+has_many :users_projects, images, entries
 ```
 ```
-belongs_to :company, staffing
+has_many :projects, through: :users_projects, dependent: :delete_all
+```
+```
+belongs_to :company
 ```  
   
 **table**  
@@ -29,41 +32,41 @@ has_many :users, projects, images, entries
 ```
 
 **table**  
-* campany_name, string
-* url, string
+* company_name, string
+* company_url, string
 * founder, string
 * established, datetime
 * created_at, datetime  
 * updated_at, datetime
 
 ##Project
-**association**  
+**association**
 ```
-has_many :staffings
-```  
+has_many :users_projects
+```
+```
+has_many :users, through: :users_projects
+```
 ```
 belongs_to :company
 ```  
 
 **table**  
-* company_id, integer  
-* title, string
+* company, references
+* project_title, string
 * pv_count, integer
 * created_at, datetime
 * updated_at, datetime
 
-##Staffing
+##Users_Projects
 **association**  
 ```
-has_one :user
-```
-```
-belongs_to :project
+belongs_to :user, project
 ```  
   
 **table**
-* user_id, integer
-
+* user, references
+* project, references
 
 ##Image
 **association**
@@ -73,6 +76,7 @@ belongs_to :user, company
 **table**
 * type, integer (user: 0, company: 1)
 * status, integer (cover: 0, avatar: 1)
+* content, string
 * created_at, datetime  
 * updated_at, datetime
 
@@ -82,8 +86,8 @@ belongs_to :user, company
 belongs_to :user, company
 ```
 **table**
-* user_id, integer
-* company_id, integer
+* user, references
+* company, references
 * answer, string
 * created_at, datetime  
 * updated_at, datetime
