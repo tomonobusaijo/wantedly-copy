@@ -3,67 +3,89 @@
 ##User
 **association**  
 ```
-has_many 
+has_many :images, entries
+```
+```
+belongs_to :company, staffing
 ```  
   
 **table**  
-* **name**, string  
-* member, string  
-* profile, text  
-* works, text  
+* name, string  
+* sex, integer (male: 0, female: 1)  
+* birth_year, integer
+* birth_month, integer
+* birth_day, integer
+* works, string
+* image, string (cover: 0, avatar: 1)
+* address, string
+* catchcopy, string
+* introduction, text
 * created_at, datetime  
 * updated_at, datetime
 
-##Projects
+##Company
 **association**  
 ```
-has_many
-```  
+has_many :users, projects, images, entries
 ```
-belongs_to
-```  
 
 **table**  
-* user_id, integer  
-* title, string  
-* catchcopy, string  
-* concept, text  
+* campany_name, string
+* url, string
+* founder, string
+* established, datetime
+* image, string (cover: 0, avatar: 1)
 * created_at, datetime  
 * updated_at, datetime
 
-##CapturedImage
+##Project
 **association**  
 ```
-belongs_to :prototype
+has_many :staffings
+```  
+```
+belongs_to :company
 ```  
 
 **table**  
-* prototype_id, integer  
-* created_at, datetime  
+* company_id, integer  
+* title, string
+* pv_count, integer
+* created_at, datetime
 * updated_at, datetime
-* **role, integer ( main: 0, sub: 1 )**
 
-##Like
+##Staffing
 **association**  
 ```
-belongs_to :user, prototype
+has_one :user
+```
+```
+belongs_to :project
 ```  
-
-**table**  
+  
+**table**
 * user_id, integer
-* prototype_id, integer
+
+
+##Image
+**association**
+```
+belongs_to :user, company
+```
+**table**
+* type, integer (user: 0, company: 1)
+* status, integer (cover: 0, avatar: 1)
 * created_at, datetime  
 * updated_at, datetime
 
-##Comment
-**association**  
+##Entry
+**association**
 ```
-belongs_to :user, prototype
-```  
-
-**table**  
-* content, text  
+belongs_to :user, company
+```
+**table**
 * user_id, integer
-* prototype_id, integer
+* company_id, integer
+* answer, string
 * created_at, datetime  
 * updated_at, datetime
