@@ -67,6 +67,8 @@ belongs_to :user, project
 **table**
 * user, references
 * project, references
+* created_at, datetime
+* updated_at, datetime
 
 ##Image
 **association**
