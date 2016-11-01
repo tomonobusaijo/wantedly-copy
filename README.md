@@ -16,7 +16,6 @@ belongs_to :company, staffing
 * birth_month, integer
 * birth_day, integer
 * works, string
-* image, string (cover: 0, avatar: 1)
 * address, string
 * catchcopy, string
 * introduction, text
@@ -34,7 +33,6 @@ has_many :users, projects, images, entries
 * url, string
 * founder, string
 * established, datetime
-* image, string (cover: 0, avatar: 1)
 * created_at, datetime  
 * updated_at, datetime
 
