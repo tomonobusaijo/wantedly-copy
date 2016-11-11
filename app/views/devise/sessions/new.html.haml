@@ -1,0 +1,29 @@
+.intro-bar
+  %p Wantedlyを使うと運命のチームやシゴトに出会えたり、シゴト仲間のつながり管理が簡単になります
+
+#container
+  #main-outer.cf
+    #header.cf
+      #header-inner
+        %header#global-header.cf
+          .global-menu-wrapper
+            %p.header-logo{style: "width: 191px; padding: 0;"}
+              = link_to image_tag('https://de7iszmjjjuya.cloudfront.net/assets/beta/header-logo-loggedout-66266e267d05a5396f630832212b176a.png', alt: "Wantedly"), root_path
+          #menu-logged-out
+            %ul
+              %li
+                = link_to '採用担当者の方はこちら', '/about/list', id: "header-recruiter"
+              %li
+                = link_to 'ログイン', '/', class: 'ui-show-modal'
+
+    #main.sessions-controller.sessions-new.action-new.cf{style: "margin-top: 20px;"}
+      #main-inner.cf
+        %h1 ログイン
+
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          %label{for: 'user_email'} メールアドレス
+          = f.email_field :email, autofocus: "autofocus", id: 'user_email'
+          %label{for: 'user_password'} パスワード
+          = f.password_field :password, autocomplete: "off", id: 'user_password'
+          = f.submit 'ログイン', class: 'wt-ui-button wt-ui-button-blue', style: "margin-top: 40px;"
+          = link_to '戻る', '/', class: 'wt-ui-button wt-ui-botton-gray'
