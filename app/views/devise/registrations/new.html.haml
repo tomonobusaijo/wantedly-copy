@@ -1,0 +1,55 @@
+#container
+  #main-outer.cf
+    #header.cf
+      #header-inner
+        %header.cf
+          .global-menu-wrapper.cf
+            %p.header-logo{style: "width: 191px; padding: 0;"}
+              = link_to image_tag('https://de7iszmjjjuya.cloudfront.net/assets/beta/header-logo-loggedout-66266e267d05a5396f630832212b176a.png', alt: "Header logo loggedout"), root_path
+
+    #main.registrations-controller.registrations-new
+      #main-inner.cf
+        .main-body
+          %h1 30秒でアカウント登録（無料です）
+          #confirm-email-and-signup
+            = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "new_user ng-pristine ng-valid"}) do |f|
+              .confirm-email-block
+                %span 名前
+                = f.text_field :name, placeholder: "山田 太郎", style: "padding: 10px;"
+              .confirm-email-block
+                %span 性別
+                = f.radio_button :gender, "male"
+                男性
+                = f.radio_button :gender, "female"
+                女性
+              .confirm-email-block
+                %span 生年月日
+                = f.select :birthday_year, ((1930..Date.today.year).map{ |year| [year, year] }).unshift(['', ''])
+                = f.select :birthday_month, ((1..12).map{ |month| [month, month] }).unshift(['', ''])
+                = f.select :birthday_day, ((1..31).map{ |day| [day, day] }).unshift(['', ''])
+              .confirm-email-block
+                %span Email
+                = f.email_field :email, id: "email", placeholder: "メールアドレスを入力してください", size:"40", style: "padding: 10px;"
+              .confirm-email-block
+                %span Password
+                = f.password_field :password, id: "password", placeholder: "パスワードを入力してください", size:"40", style: "padding: 10px;"
+              .signup-up-captions
+                = f.submit "登録する", class: "wt-ui-button wt-ui-button-green wt-ui-button-large"
+
+              %p.signin-link
+                = link_to "Emailでのログインはこちら", "/users/sign_in", class: "email-signin-button"
+
+        .right-side-message
+          %h2 安心してご利用いただけます
+          %p
+          %p Wantedlyでは皆様に安心してご利用いただける様、プライバシーに最大限配慮しております。
+          %p 皆様に安心してお使いいただくために、ご登録時の情報の表示範囲を以下に明示致します。
+
+          %p
+          %h3 プロフィール情報の表示範囲
+          %p ご登録に際してお客様にご入力いただいたプロフィール情報の公開範囲は、公開設定より細かくコントロールできます。
+          %p
+          %p Wantedlyでは皆様に安心してご利用いただけるよう改良を行ってまいります。何かお気づきの点、ご質問等ございましたら以下のメールアドレスまでお問い合わせください。
+          %p support@wantedly.com
+          %p 今後ともWantedlyを宜しくお願い致します。
+          %p

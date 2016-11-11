@@ -1,0 +1,13 @@
+// リセットCSS
+@import "./reset";
+
+//ミックスインファイル
+@import './mixins/clearfix';
+
+// デザインモジュール
+@import "./modules/buttons";
+@import "./modules/header";
+@import "./modules/footer";
+@import "./devise/registration/new";
+@import "./devise/sessions/new";
+@import "./projects/index";

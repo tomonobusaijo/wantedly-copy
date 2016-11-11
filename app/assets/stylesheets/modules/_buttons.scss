@@ -1,0 +1,57 @@
+.wt-ui-button, button.wt-ui-button, button {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #45494B;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+
+  &.wt-ui-button-large {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    padding:0 70px;
+  }
+
+  &:hover {
+    background: #EBEDEF;
+    text-decoration: none;
+  }
+
+  &.wt-ui-button-blue {
+    background: #00A4BB;
+    border-color: #1e7785;
+    color: #fff !important;
+    font-weight: 300;
+
+    &:hover {
+      background: #1e7785;
+    }
+  }
+
+  &.wt-ui-button-green {
+    background: #6CC644;
+    border-color: #4f8338;
+    color: #fff !important;
+    font-weight: 300;
+
+    &:hover {
+      background: #4f8338;
+    }
+  }
+}

@@ -1,0 +1,204 @@
+/*-- projects/index / Before Sign In ---------------------------------- */
+
+#about_root_new >.hero >.header {
+  position: relative;
+  z-index: 1;
+}
+
+#about_root_new >.hero >.header > img.wantedly-logo {
+  position: absolute;
+  top: 27px;
+  left: 27px;
+  opacity: 8;
+  cursor: pointer;
+}
+
+#about_root_new >.hero >.header > ul.nav {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+
+#about_root_new >.hero >.header > ul.nav > li {
+  display: block;
+  float: left;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+  color: rgba(0,0,0,0.4);
+  font-weight: 600;
+}
+
+#about_root_new >.hero >.header > ul.nav > li+li {
+  margin-left: 31px;
+}
+
+#about_root_new >.hero >.header > ul.nav > li a {
+  color: rgba(0,0,0,0.6);
+  text-decoration: none;
+}
+
+
+
+/*-- common parts ---------------------------------- */
+
+#header {
+  z-index: 1100;
+  min-width: 980px;
+  height: 60px;
+  position: relative;
+
+  & .global-menu-wrapper {
+    float: left;
+
+    & .global-menu {
+      float: left;
+
+      & ul li {
+          float: left;
+          height: 59px;
+          line-height: 59px;
+          font-size: 13px;
+
+        &.user-menu {
+          font-weight: 600;
+          margin-left: 10px;
+          list-style: none;
+        }
+
+        & a {
+          display: block;
+          padding: 0 8px;
+          color: #45494B;
+          text-decoration: none;
+        }
+
+        &:hover a {
+          color: #00A4BB;
+        }
+      }
+
+      & ul li.user-menu {
+        font-weight: 600;
+        margin-left: 10px;
+        list-style: none;
+      }
+
+      & ul li a {
+        display: block;
+        padding: 0 8px;
+        color: #45494B;
+      }
+
+      & ul li.selected a {
+        color: #00A4BB;
+      }
+    }
+
+    & .header-logo {
+      float: left;
+
+      a {
+        padding: 19px;
+        display: block;
+
+        img {
+          display: block;
+        }
+      }
+
+      &.logo-icon a {
+        width: 44px;
+        height: 44px;
+        padding: 8px 8px 7px 8px;
+        background: #fff;
+      }
+    }
+  }
+
+  & .user-menu-wrapper .user-menu-content {
+    width: 100%;
+    min-width: 260px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    top: 44px;
+    right: 0;
+    z-index: 99;
+    display: none;
+
+    & .user-menu-list {
+      padding: 10px 0;
+
+      & li {
+        line-height: 1.3;
+        font-size: 13px;
+
+        & a {
+          display: block;
+          padding: 10px 20px;
+          color: #45494B;
+        }
+      }
+    }
+  }
+}
+
+#global-header {
+  height: 60px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  min-width: 980px;
+  -moz-box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+
+  & .user-menu-wrapper {
+    float: right;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin: 0;
+
+    & .user-profile-photo {
+      width: 40px;
+      height: 40px;
+      -o-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -webkit-border-radius: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+
+/*-- projects/index / After Sign In ---------------------------------- */
+
+
+
+
+
+
+
+
+

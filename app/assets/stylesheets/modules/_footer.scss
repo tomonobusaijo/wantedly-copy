@@ -1,0 +1,21 @@
+footer {
+  background: #f0f4f5;
+  padding: 50px 0;
+  border-top: 1px solid #e3e3e3;
+
+  #footer-logo-and-like {
+    padding-left: 202px;
+    position: relative;
+
+    #footer-logo {
+      width: 172px;
+      height: 25px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
