@@ -1,0 +1,89 @@
+.intro-bar {
+  position: relative;
+  background: #00A4BB;
+  text-align: center;
+  line-height: 1;
+  overflow: hidden;
+
+  p {
+    color: #FFF;
+    padding-right: 60px;
+    margin: 19px 0;
+  }
+}
+
+#menu-logged-out {
+  width: 300px;
+  float: right;
+  margin: 0;
+
+  ul {
+    overflow: hidden;
+    padding-right: 10px;
+    list-style: none;
+
+    li {
+      float: left;
+      line-height: 40px;
+      margin: 10px 0 0 10px;
+
+      a {
+        font-size: 14px;
+        color: #00A4BB;
+        padding: 0 10px;
+        display: block;
+      }
+    }
+  }
+}
+
+
+#main.sessions-new {
+  padding: 50px 0 80px;
+
+  label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #6A6E71;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    line-height: 20px;
+    width: 260px;
+  }
+
+  .wt-ui-button {
+    padding: 0;
+    height: 42px;
+    line-height: 42px;
+    width: 280px;
+    display: block;
+    margin-top: 15px;
+  }
+
+  #main-inner {
+    padding: 0;
+    margin: 0 auto;
+    width: 980px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      margin: 0px;
+      padding: 0px;
+      background: none repeat scroll 0 0;
+      border: 0px solid #DDDDDD;
+      border-radius: 5px;
+    }
+  }
+}
+
