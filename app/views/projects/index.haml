@@ -1,0 +1,306 @@
+- if user_signed_in?
+  #container
+    #main-outer.cf
+      #header.cf
+        #header-inner
+          %header#global-header.cf
+            .global-menu-wrapper.cf
+              %p.header-logo.logo-icon
+                = link_to image_tag("https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg", alt: "Wantedly", style: "width: 44px; height: 44px;")
+              .global-menu
+                %ul
+                  %li.selected.user-menu
+                    = link_to "募集をみる", "/projects"
+                  %li.more-service-list-menu.user-menu
+                    = link_to "プロフィール", ""
+
+                  / 一時的に作成、後で消そう…
+                  %li.user-logout.user-menu
+                    = link_to "ログアウト", destroy_user_session_path
+
+            .user-menu-wrapper
+              .user-profile-photo{"data-hasqtip":26}
+                %span
+                  %img{src:"https://graph.facebook.com/100001979745761/picture?type=square"}
+              .user-menu-content
+                .current-account
+                  %ul
+                    %li
+                      = link_to "", ""
+                      .name
+                      .profile プロフィールを編集
+
+                .user-menu-list
+                  %ul
+                    %li
+                      = link_to "気になるリスト / フォロー", "", id: "bookmarks-link"
+                    %li
+                      = link_to "応募履歴 / メッセージ", "", id: "my-message-link"
+                    %li
+                      = link_to "友達を招待", "", id: "menu-invitation"
+                    %li
+                      = link_to "アカウント設定", "", id: "bookmarks-link"
+                    %li
+                      = link_to "ログアウト", destroy_user_session_path
+
+      / 特集プロジェクト
+      #feature-projects
+        .featured-projects-wrapper
+
+
+      #main.projects-controller.projects-index.action-index.cf
+        #main-inner.cf
+          #project-index
+            .two-column.left-side-bar.cf{style: "position:relative;"}
+              .column-main
+                .column-main-inner
+                  / .loader-wrapper これも必要ないかな
+                  .projects-index-menu
+                    %p.projects-count 1/1892
+                    .projects-index-sort-menu.cf
+                      %ul
+                        %li
+                          = link_to "人気", ""
+                        %li
+                          = link_to "新着", ""
+
+                      %h4 並び替え
+
+                  .projects-index-list
+                    %article.projects-index-single.playing
+                      .project-index-single-outer
+                        .project-index-single-inner
+                          .project-cover-wrapper
+                            .cover-image
+                              = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/571499/original/763c11ad-3840-48bd-84d0-118a4e874be5.jpeg?1474943105", style: "width: 560px; height: 228px;")
+                          .project-detail
+                            .project-labels
+                              %span.icon-job-type.web_engineer
+                            %h1.project-title
+                              = link_to "新たなマーケティングプラットフォームを創造するエンジニアWANTED！", "/"
+                            %p.project-excerpt
+                        .project-bottom
+                          %table{role:"presentation"}
+                            %tbody
+                              %tr
+                                %td.company-thumbnail
+                                  = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/2183/original/fd0bdc6d-abd1-40e9-95ba-24c2c531b111.png?1476439358", style: "width: 50px; height: 50px; display: block;")
+                                %td.company-name.company-with-prefecture
+                                  %h3
+                                    = link_to "株式会社Speee", "", class: "wt-company ng-isolate-scope"
+
+                  .projects-index-list
+                    %article.projects-index-single.playing
+                      .project-index-single-outer
+                        .project-index-single-inner
+                          .project-cover-wrapper
+                            .cover-image
+                              = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/571499/original/763c11ad-3840-48bd-84d0-118a4e874be5.jpeg?1474943105", style: "width: 560px; height: 228px;")
+                          .project-detail
+                            .project-labels
+                              %span.icon-job-type.web_engineer
+                            %h1.project-title
+                              = link_to "新たなマーケティングプラットフォームを創造するエンジニアWANTED！", "/"
+                            %p.project-excerpt
+                        .project-bottom
+                          %table{role:"presentation"}
+                            %tbody
+                              %tr
+                                %td.company-thumbnail
+                                  = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/2183/original/fd0bdc6d-abd1-40e9-95ba-24c2c531b111.png?1476439358", style: "width: 50px; height: 50px; display: block;")
+                                %td.company-name.company-with-prefecture
+                                  %h3
+                                    = link_to "株式会社Speee", "", class: "wt-company ng-isolate-scope"
+
+                  .projects-index-list
+                    %article.projects-index-single.playing
+                      .project-index-single-outer
+                        .project-index-single-inner
+                          .project-cover-wrapper
+                            .cover-image
+                              = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/571499/original/763c11ad-3840-48bd-84d0-118a4e874be5.jpeg?1474943105", style: "width: 560px; height: 228px;")
+                          .project-detail
+                            .project-labels
+                              %span.icon-job-type.web_engineer
+                            %h1.project-title
+                              = link_to "新たなマーケティングプラットフォームを創造するエンジニアWANTED！", "/"
+                            %p.project-excerpt
+                        .project-bottom
+                          %table{role:"presentation"}
+                            %tbody
+                              %tr
+                                %td.company-thumbnail
+                                  = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/2183/original/fd0bdc6d-abd1-40e9-95ba-24c2c531b111.png?1476439358", style: "width: 50px; height: 50px; display: block;")
+                                %td.company-name.company-with-prefecture
+                                  %h3
+                                    = link_to "株式会社Speee", "", class: "wt-company ng-isolate-scope"
+
+                  .projects-index-list
+                    %article.projects-index-single.playing
+                      .project-index-single-outer
+                        .project-index-single-inner
+                          .project-cover-wrapper
+                            .cover-image
+                              = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/571499/original/763c11ad-3840-48bd-84d0-118a4e874be5.jpeg?1474943105", style: "width: 560px; height: 228px;")
+                          .project-detail
+                            .project-labels
+                              %span.icon-job-type.web_engineer
+                            %h1.project-title
+                              = link_to "新たなマーケティングプラットフォームを創造するエンジニアWANTED！", "/"
+                            %p.project-excerpt
+                        .project-bottom
+                          %table{role:"presentation"}
+                            %tbody
+                              %tr
+                                %td.company-thumbnail
+                                  = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/2183/original/fd0bdc6d-abd1-40e9-95ba-24c2c531b111.png?1476439358", style: "width: 50px; height: 50px; display: block;")
+                                %td.company-name.company-with-prefecture
+                                  %h3
+                                    = link_to "株式会社Speee", "", class: "wt-company ng-isolate-scope"
+
+                  .projects-index-list
+                    %article.projects-index-single.playing
+                      .project-index-single-outer
+                        .project-index-single-inner
+                          .project-cover-wrapper
+                            .cover-image
+                              = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/571499/original/763c11ad-3840-48bd-84d0-118a4e874be5.jpeg?1474943105", style: "width: 560px; height: 228px;")
+                          .project-detail
+                            .project-labels
+                              %span.icon-job-type.web_engineer
+                            %h1.project-title
+                              = link_to "新たなマーケティングプラットフォームを創造するエンジニアWANTED！", "/"
+                            %p.project-excerpt
+                        .project-bottom
+                          %table{role:"presentation"}
+                            %tbody
+                              %tr
+                                %td.company-thumbnail
+                                  = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/2183/original/fd0bdc6d-abd1-40e9-95ba-24c2c531b111.png?1476439358", style: "width: 50px; height: 50px; display: block;")
+                                %td.company-name.company-with-prefecture
+                                  %h3
+                                    = link_to "株式会社Speee", "", class: "wt-company ng-isolate-scope"
+
+                  .projects-index-list
+                    %article.projects-index-single.playing
+                      .project-index-single-outer
+                        .project-index-single-inner
+                          .project-cover-wrapper
+                            .cover-image
+                              = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/571499/original/763c11ad-3840-48bd-84d0-118a4e874be5.jpeg?1474943105", style: "width: 560px; height: 228px;")
+                          .project-detail
+                            .project-labels
+                              %span.icon-job-type.web_engineer
+                            %h1.project-title
+                              = link_to "新たなマーケティングプラットフォームを創造するエンジニアWANTED！", "/"
+                            %p.project-excerpt
+                        .project-bottom
+                          %table{role:"presentation"}
+                            %tbody
+                              %tr
+                                %td.company-thumbnail
+                                  = link_to image_tag("https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/2183/original/fd0bdc6d-abd1-40e9-95ba-24c2c531b111.png?1476439358", style: "width: 50px; height: 50px; display: block;")
+                                %td.company-name.company-with-prefecture
+                                  %h3
+                                    = link_to "株式会社Speee", "", class: "wt-company ng-isolate-scope"
+
+
+                  .projects-index-pagination
+                  / .overseas-projects-list 実際のページにもない
+              .column-side
+                / 実装するかは時間次第
+
+        / 右下のボタン
+        %p#back-top{style:"display: block;"}
+          = link_to image_tag("https://de7iszmjjjuya.cloudfront.net/assets/page-top-icon-25d9552139ea2c7c6100c4d0289e6f07.png", alt: "Page top icon"), "#top"
+
+      / 最近みた募集
+      #footer-projects-wrapper
+        #browse-histories
+          .projects-row-wrapper
+            %h3.row-title 最近みた募集
+            %ul.projects.slick-initialized.slick-slider
+
+
+
+
+
+- else
+  #container
+    #main-outer.cf
+      #main.about-controller.about-root.action-root.cf
+        #main-inner.cf
+          #login-modal.closable-by-click.ui-modal-wrapper{style:"display: none; false"}
+            .ui-modal-close.ui-modal-overlay
+              %span.ui-modal-close
+                %i.icon-remove
+
+            .ui-modal-contents-container
+              .ui-modal-contents-inner{style: "margin-left: -150px; margin-top: -208.5px;"}
+                .ui-modal-contents-title
+                  %p.title ログイン
+
+                .ui-modal-contents
+                  .login-modal-wrapper
+                    .login-email
+                      = form_for(resource, as: resource_name, url: user_session_path(resource_name), html: {class: "new_user"}) do |f|
+                        %label{for: 'user_email'} メールアドレス
+                        = f.email_field :email, autofocus: "autofocus", id: 'user_email'
+                        %label{for: 'user_password'} パスワード
+                        = f.password_field :password, autocomplete: "off", id: 'user_password'
+                        = f.submit "ログイン", class: "wt-ui-button"
+
+        %p#back-top
+          = link_to image_tag('https://de7iszmjjjuya.cloudfront.net/assets/page-top-icon-25d9552139ea2c7c6100c4d0289e6f07.png', alt: "Page top icon"), "#top"
+
+      #about_root_new
+        .bg{:style => "background-image: url(\"https://de7iszmjjjuya.cloudfront.net/assets/about/root/bg_features-4da67dd33a9a5d077ae9e373a7f4afae.jpg\"); opacity: 1;"}
+        .hero
+          %video{loop: "loop", src: "https://dubpy8abnqmkw.cloudfront.net/videos/lp_background.mp4", style:"opacity: 1;"}
+          %header.header
+            %img.wantedly-logo{alt: "Wantedly", src: "https://de7iszmjjjuya.cloudfront.net/assets/footer-logo-6e6126b999df30df70b8c8d51f75d2ac.png", class: "wantedly-logo", style: "width: 151px; height: 22px;"}
+            %ul.nav
+              %li
+                = link_to 'ログイン', "/users/sign_in", class: "ui-show-modal"
+              %li
+                = link_to '採用担当者の方', "/about/list", id: "header-recruiter"
+          .ja.visual
+            %h1.text.loaded
+              %img{alt: "「はたらく」を面白く", src: "https://de7iszmjjjuya.cloudfront.net/assets/about/root/img_visutal_text_ja-99f2e1feb8f8178be52ed51907308d7b.png", style: "width: 536px; height: 72px;"}
+          .lead
+            %p
+              %b 月間100万人が利用する、国内最大のビジネス SNS
+            %ul.buttons
+              %li.email
+                = link_to 'Emailで登録', '/users/sign_up?ref=root'
+          .more
+            %ul
+              %li
+                %img{alt: "More", src: "https://de7iszmjjjuya.cloudfront.net/assets/about/root/ic_chevron_bottom-b59628bf89da28b9c2bef90d5aa49d89.png", style: "width: 24px; height: 24px;"}
+              %li MORE ABOUT WANTEDLY
+
+        %section.sec-features{"data-background": "https://de7iszmjjjuya.cloudfront.net/assets/about/root/bg_features-4da67dd33a9a5d077ae9e373a7f4afae.jpg"}
+          .container
+            %h2 共感で人や企業とつながり、シゴトでココロおどろう。無料です。
+            %ul
+              %li
+                %img{alt: "", src: "https://de7iszmjjjuya.cloudfront.net/assets/about/root/img_feature_visit_ja-b9b9002b041addb18f6bbbf8316ebbf4.png", style: "width: 300px; height: 170px;"}
+                %h3 であう
+                %p
+                  キラッと光るプロジェクトや
+                  %br>/
+                  会社を見つけて、気軽に訪問しよう
+              %li
+                %img{alt: "", src: "https://de7iszmjjjuya.cloudfront.net/assets/about/root/img_feature_profile-e0b8d1744850dedfa95759d9fe955dbd.png", style: "width: 300px; height: 170px;"}
+                %h3 つながる
+                %p
+                  キャリアプロフィールを作成
+                  %br>/
+                  人脈を構築し、広げよう
+              %li
+                %img{alt: "", src: "https://de7iszmjjjuya.cloudfront.net/assets/about/root/img_feature_chat-f0ce4519e34a7534ee74d3a02a8b8d5a.png", style: "width: 300px; height: 170px;"}
+                %h3 つくる
+                %p
+                  ビジネス専用グループチャット
+                  %br>/
+                  Sync で生産性を倍に

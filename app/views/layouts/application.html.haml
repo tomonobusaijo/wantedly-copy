@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "text/html; charset=US-ASCII", "http-equiv" => "Content-Type"}/
+    %title Wantedly-Copy 「はたらく」を面白くするビジネスSNS
+    = stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application' 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = yield
+    = render "layouts/footer"
